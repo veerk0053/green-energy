@@ -1,4 +1,4 @@
-// Resources data
+
 let resources = {
     p1: {
         title: 'Government Incentives and Subsidies',
@@ -17,18 +17,18 @@ let resources = {
     }
 };
 
-// Get references to the active parts of the HTML
+
 let buttons = document.querySelectorAll('#controls button');
 let dc = document.getElementById('dynamic-content');
 
 // Event handler
 function selectPage(ev) {
     let currentButton = ev.target.closest('button');
-    // Remove the 'active' class from all buttons and add it to the current button
+
     buttons.forEach(btn => btn.classList.remove('active'));
     currentButton.classList.add('active');
 
-    // Update the dynamic-content div with the selected page data
+
     dc.style.opacity = '0';
     dc.style.transform = 'translateY(20px)';
     setTimeout(() => {
@@ -44,7 +44,7 @@ function selectPage(ev) {
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    // Set default content
+
     dc.style.opacity = '0';
     dc.style.transform = 'translateY(20px)';
     setTimeout(() => {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         dc.style.transform = 'translateY(0)';
     }, 300);
 });
-// Register buttons for click event
+
 buttons.forEach(button => {
     button.addEventListener('click', selectPage);
 });
