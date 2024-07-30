@@ -133,7 +133,6 @@ footer ul li {
 
 /* Media queries */
 
-/* Mobile styles (up to 600px) */
 @media (max-width: 480px) {
     nav ul {
         flex-direction: column;
